@@ -229,6 +229,7 @@
 
   function resize(preserve = true) {
     const snapshot = preserve && canvas.width > 0 ? canvas.toDataURL() : null;
+    dpr = Math.min(window.devicePixelRatio || 1, 2);
     const w = window.innerWidth;
     const h = window.innerHeight;
     canvas.width = w * dpr;
